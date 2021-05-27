@@ -9,5 +9,9 @@
     <string name="game_trivia">Trivia</string>
     <string name="text_trivia">placeholder question?</string>
     <string name="text_answer">Input Answer</string>
+    <string name="game_riddles">Riddles</string>
+    <string name="game_reaction">Reaction</string>
+    <string name="game_shapes">Shapes</string>
+    <string name="game_vocabulary">Vocabulary</string>
 
 </resources>
