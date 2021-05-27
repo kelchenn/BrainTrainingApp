@@ -5,17 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.example.braintraining.databinding.ActivityMainBinding;
+import com.example.braintraining.ui.learn.LearnActivity;
+import com.example.braintraining.ui.play.PlayActivity;
+import com.example.braintraining.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -29,18 +26,35 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppName = findViewById(R.id.appName);
-        PlayButton = findViewById(R.id.playButton);
-        LearnButton = findViewById(R.id.learnButton);
-        SettingsButton = findViewById(R.id.settingsButton);
+        PlayButton = (Button)findViewById(R.id.playButton);
+        LearnButton = (Button)findViewById(R.id.learnButton);
+        SettingsButton = (Button)findViewById(R.id.settingsButton);
 
         PlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AppName.setText("The Button was Clicked!");
+                Intent intent = new Intent(MainActivity.this,
+                        PlayActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        LearnButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,
+                        LearnActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        SettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,
+                        SettingsActivity.class);
+                startActivity(intent);
             }
         });
     }
-
 }
