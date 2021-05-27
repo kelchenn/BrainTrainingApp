@@ -5,18 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.braintraining.ui.play.PlayActivity;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
-import com.example.braintraining.databinding.ActivityMainBinding;
+import com.example.braintraining.ui.play.PlayActivity;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -30,19 +24,14 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AppName = findViewById(R.id.appName);
-        PlayButton = findViewById(R.id.playButton);
-        LearnButton = findViewById(R.id.learnButton);
-        SettingsButton = findViewById(R.id.settingsButton);
-
+        PlayButton = (Button)findViewById(R.id.playButton);
         PlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Context context = v.getContext();
-                Intent intent = new Intent(context, PlayActivity.class);
+                Intent intent = new Intent(MainActivity.this,
+                        PlayActivity.class);
                 startActivity(intent);
             }
         });
     }
-
 }
