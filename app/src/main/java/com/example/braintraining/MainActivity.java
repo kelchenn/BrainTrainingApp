@@ -16,21 +16,21 @@ import com.example.braintraining.ui.settings.SettingsActivity;
 
 public class MainActivity extends AppCompatActivity{
 
-    TextView AppName;
-    Button PlayButton;
-    Button LearnButton;
-    Button SettingsButton;
+    TextView appName;
+    Button playButton;
+    Button learnButton;
+    Button settingsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        PlayButton = (Button)findViewById(R.id.playButton);
-        LearnButton = (Button)findViewById(R.id.learnButton);
-        SettingsButton = (Button)findViewById(R.id.settingsButton);
+        playButton = (Button)findViewById(R.id.playButton);
+        learnButton = (Button)findViewById(R.id.learnButton);
+        settingsButton = (Button)findViewById(R.id.settingsButton);
 
-        PlayButton.setOnClickListener(new View.OnClickListener() {
+        playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        LearnButton.setOnClickListener(new View.OnClickListener() {
+        learnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        SettingsButton.setOnClickListener(new View.OnClickListener() {
+        settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,

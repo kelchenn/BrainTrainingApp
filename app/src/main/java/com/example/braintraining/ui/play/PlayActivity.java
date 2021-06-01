@@ -12,18 +12,18 @@ import com.example.braintraining.R;
 
 public class PlayActivity extends AppCompatActivity {
 
-    Button BackButton;
-    Button TriviaButton;
+    Button backButton;
+    Button triviaButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play);
 
-        BackButton = (Button)findViewById(R.id.backButton);
-        TriviaButton = (Button)findViewById(R.id.triviaButton);
+        backButton = (Button)findViewById(R.id.backButton);
+        triviaButton = (Button)findViewById(R.id.triviaButton);
 
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PlayActivity.this,
@@ -32,7 +32,7 @@ public class PlayActivity extends AppCompatActivity {
             }
         });
 
-        TriviaButton.setOnClickListener(new View.OnClickListener() {
+        triviaButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PlayActivity.this,

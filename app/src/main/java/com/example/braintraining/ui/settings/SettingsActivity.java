@@ -13,16 +13,16 @@ import com.example.braintraining.ui.play.PlayActivity;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    Button BackButton;
+    Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        BackButton = (Button)findViewById(R.id.backButton3);
+        backButton = (Button)findViewById(R.id.backButton3);
 
-        BackButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SettingsActivity.this,
