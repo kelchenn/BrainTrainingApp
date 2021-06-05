@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,10 +43,11 @@ public class TriviaActivity extends AppCompatActivity {
         String triviaAnswer = triviaInput.getText().toString();
 
         backButton = (Button)findViewById(R.id.backButton4);
-
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.byebye);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 Intent intent = new Intent(TriviaActivity.this,
                         PlayActivity.class);
                 startActivity(intent);

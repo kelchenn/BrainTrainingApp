@@ -3,6 +3,7 @@ package com.example.braintraining.ui.play;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +23,11 @@ public class PlayActivity extends AppCompatActivity {
 
         backButton = (Button)findViewById(R.id.backButton);
         triviaButton = (Button)findViewById(R.id.triviaButton);
-
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.byebye);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 Intent intent = new Intent(PlayActivity.this,
                         MainActivity.class);
                 startActivity(intent);
