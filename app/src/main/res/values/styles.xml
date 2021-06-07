@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MusicSwitch">
+        <item name="colorControlActivated">#33CC33</item>
+        <item name="colorSwitchThumbNormal">#9D9DA4</item>
+        <item name="android:colorForeground">#C2C2C2</item>
+    </style>
+
+</resources>
