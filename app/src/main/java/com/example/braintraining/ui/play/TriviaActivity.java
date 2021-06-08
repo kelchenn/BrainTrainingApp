@@ -71,7 +71,7 @@ public class TriviaActivity extends AppCompatActivity {
                             finish();
                             startActivity(getIntent());
                         }
-                    }, 5000);
+                    }, 2000);
                 } else {
                     responseText.setText(response);
                     handler.postDelayed(new Runnable() {
@@ -80,7 +80,7 @@ public class TriviaActivity extends AppCompatActivity {
                             finish();
                             startActivity(getIntent());
                         }
-                    }, 5000);
+                    }, 4000);
                 }
             }
         });
