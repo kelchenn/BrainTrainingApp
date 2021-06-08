@@ -15,6 +15,7 @@ import android.os.Handler;
 
 import com.example.braintraining.MainActivity;
 import com.example.braintraining.R;
+import com.example.braintraining.Reference;
 
 import java.util.*;
 
@@ -90,7 +91,9 @@ public class TriviaActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+                if (Reference.switchState){
+                    mp.start();
+                }
                 Intent intent = new Intent(TriviaActivity.this,
                         PlayActivity.class);
                 startActivity(intent);

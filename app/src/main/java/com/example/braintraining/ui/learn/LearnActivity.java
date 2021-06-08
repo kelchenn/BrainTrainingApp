@@ -11,6 +11,7 @@ import android.widget.Button;
 
 import com.example.braintraining.MainActivity;
 import com.example.braintraining.R;
+import com.example.braintraining.Reference;
 import com.example.braintraining.ui.play.PlayActivity;
 
 public class LearnActivity extends AppCompatActivity {
@@ -27,7 +28,9 @@ public class LearnActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mp.start();
+                if (Reference.switchState){
+                    mp.start();
+                }
                 Intent intent = new Intent(LearnActivity.this,
                         MainActivity.class);
                 startActivity(intent);
