@@ -23,6 +23,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.044" />
 
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        android:textColor="@color/teal_200"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/teal_200"
+        app:backgroundTint="@color/white"
+        app:icon="?android:attr/listChoiceIndicatorSingle"
+        app:iconTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.827"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
     <TextView
         android:id="@+id/textTrivia"
         android:layout_width="wrap_content"
@@ -36,16 +53,18 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/answerText"
-        android:layout_width="231dp"
-        android:layout_height="50dp"
+    <TextView
+        android:id="@+id/responseText"
+        android:layout_width="381dp"
+        android:layout_height="28dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/triviaEditText"
@@ -54,7 +73,9 @@
         android:hint="@string/text_answer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
