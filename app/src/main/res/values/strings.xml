@@ -12,6 +12,11 @@
     <string name="text_correct">Correct!</string>
     <string name="text_incorrect">Incorrect, the correct answer is:</string>
     <string name="game_riddles">Riddles</string>
+    <string name="text_riddles">placeholder riddle</string>
+    <string name="answer_riddles1">answer1</string>
+    <string name="answer_riddles2">answer2</string>
+    <string name="answer_riddles3">answer3</string>
+    <string name="answer_riddles4">answer4</string>
     <string name="game_reaction">Reaction</string>
     <string name="game_shapes">Shapes</string>
     <string name="game_vocabulary">Vocabulary</string>
@@ -24,5 +29,6 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_riddle">RiddleActivity</string>
 
 </resources>
