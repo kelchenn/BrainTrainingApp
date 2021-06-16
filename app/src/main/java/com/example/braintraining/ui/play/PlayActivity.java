@@ -17,6 +17,7 @@ public class PlayActivity extends AppCompatActivity {
     Button backButton;
     Button triviaButton;
     Button riddlesButton;
+    Button reactionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,8 @@ public class PlayActivity extends AppCompatActivity {
 
         backButton = (Button)findViewById(R.id.backButton);
         triviaButton = (Button)findViewById(R.id.triviaButton);
+        reactionButton = (Button)findViewById(R.id.reactionButton);
+
         riddlesButton = findViewById(R.id.riddlesButton);
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.byebye);
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +47,15 @@ public class PlayActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(PlayActivity.this,
                         TriviaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        reactionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(PlayActivity.this,
+                        ReactionActivity.class);
                 startActivity(intent);
             }
         });
