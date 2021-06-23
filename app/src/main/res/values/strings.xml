@@ -10,6 +10,7 @@
     <string name="text_answer">Input Answer</string>
     <string name="text_correct">Correct!</string>
     <string name="text_incorrect">Incorrect, the correct answer is:</string>
+    <string name="text_incorrect2">Incorrect.</string>
     <string name="game_riddles">Riddles</string>
     <string name="text_riddles">placeholder riddle</string>
     <string name="answer_riddles1">answer1</string>
@@ -20,7 +21,7 @@
     <string name="text_yes">Yes</string>
     <string name="text_no">No</string>
     <string name="text_colourQuestion">Does the meaning of the word on the left match the colour of the word on the right?</string>
-    <string name="game_shapes">Shapes</string>
+    <string name="game_colour">Colour</string>
     <string name="game_vocabulary">Vocabulary</string>
     <string name="title_activity_reaction">ReactionActivity</string>
     <!-- Strings used for fragments for navigation -->

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,24 +18,34 @@ import com.example.braintraining.ui.learn.LearnActivity;
 
 import java.util.*;
 
-public class ReactionActivity extends AppCompatActivity {
+public class ColourActivity extends AppCompatActivity {
 
     Button backButton;
     Button yesButton;
     Button noButton;
 
+    public boolean checkColours(int meaning, int actual) {
+        if (meaning == actual) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reaction);
+        setContentView(R.layout.activity_colour);
 
-        backButton = (Button)findViewById(R.id.backButton6);
+        backButton = (Button)findViewById(R.id.backButton5);
         yesButton= (Button)findViewById(R.id.yesButton);
         noButton= (Button)findViewById(R.id.noButton);
 
         TextView wordColour = (TextView)findViewById(R.id.wordColour);
         TextView wordMeaning = (TextView)findViewById(R.id.wordMeaning);
+        TextView responseText = (TextView)findViewById(R.id.responseText2);
 
+        final Handler handler = new Handler();
         Random random = new Random();
 
         final MediaPlayer mp = MediaPlayer.create(this, R.raw.byebye);
@@ -44,7 +55,7 @@ public class ReactionActivity extends AppCompatActivity {
                 if (Reference.switchState){
                     mp.start();
                 }
-                Intent intent = new Intent(ReactionActivity.this,
+                Intent intent = new Intent(ColourActivity.this,
                         PlayActivity.class);
                 startActivity(intent);
             }
@@ -128,6 +139,46 @@ public class ReactionActivity extends AppCompatActivity {
             default:
                 wordMeaning.setTextColor(Color.BLACK);
         }
+
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean check = checkColours(randomMeaningA, randomColourB);
+
+                if (check == true) {
+                    responseText.setText(R.string.text_correct);
+                } else {
+                    responseText.setText(R.string.text_incorrect2);
+                }
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        finish();
+                        startActivity(getIntent());
+                    }
+                }, 2000);
+            }
+        });
+
+        noButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean check = checkColours(randomMeaningA, randomColourB);
+
+                if (check == false) {
+                    responseText.setText(R.string.text_correct);
+                } else {
+                    responseText.setText(R.string.text_incorrect2);
+                }
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        finish();
+                        startActivity(getIntent());
+                    }
+                }, 2000);
+            }
+        });
 
 
     }

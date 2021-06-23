@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BrainTraining">
-        <activity android:name=".ui.play.ReactionActivity"/>
+        <activity android:name=".ui.play.ColourActivity"></activity>
+        <activity android:name=".ui.play.ReactionActivity" />
         <activity
             android:name=".ui.play.RiddleActivity"
             android:label="@string/title_activity_riddle"
-            android:theme="@style/Theme.BrainTraining.NoActionBar"></activity>
+            android:theme="@style/Theme.BrainTraining.NoActionBar" />
         <activity android:name=".ui.play.TriviaActivity" />
         <activity android:name=".ui.learn.LearnActivity" />
         <activity android:name=".ui.settings.SettingsActivity" />

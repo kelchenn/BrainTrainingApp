@@ -7,10 +7,10 @@
     tools:context=".ui.play.PlayActivity">
 
     <Button
-        android:id="@+id/shapesButton"
+        android:id="@+id/colourButton"
         android:layout_width="145dp"
         android:layout_height="120dp"
-        android:text="@string/game_shapes"
+        android:text="@string/game_colour"
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

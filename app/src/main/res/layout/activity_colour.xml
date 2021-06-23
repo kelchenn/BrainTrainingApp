@@ -6,8 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.play.ReactionActivity">
 
+    <TextView
+        android:id="@+id/responseText2"
+        android:layout_width="381dp"
+        android:layout_height="28dp"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.651" />
+
     <Button
-        android:id="@+id/backButton6"
+        android:id="@+id/backButton5"
         android:layout_width="58dp"
         android:layout_height="40dp"
         android:textColor="@color/teal_200"
@@ -25,8 +39,8 @@
 
     <TextView
         android:id="@+id/wordMeaning"
-        android:layout_width="145dp"
-        android:layout_height="37dp"
+        android:layout_width="146dp"
+        android:layout_height="54dp"
         android:text="TextView"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +66,7 @@
     <TextView
         android:id="@+id/wordColour"
         android:layout_width="145dp"
-        android:layout_height="37dp"
+        android:layout_height="56dp"
         android:text="TextView"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
